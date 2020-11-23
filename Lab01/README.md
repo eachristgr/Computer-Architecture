@@ -43,7 +43,7 @@ After executing the above command, the files **config.ini**, **config.json** and
 - In line 65 the CPU type is MinorCPU.
 - In line 116 the numThreads = 1 defines the use of just one core for the execution.
 - In lines 183 and 222 we can see that the dcache size is 32768 bytes.
-- In line 260 we can see the range of the walker cache.
+- In line 316 we can see the range of the walker cache.
 - In line 911 the range of icache is mentioned.
 - In line 929 we can see that the icache size is 49152 bytes.
 - In line 1427 and 1557 the ranks_per_channel = 2 gives us the number of ranks in both channels.
