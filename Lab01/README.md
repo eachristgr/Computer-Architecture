@@ -26,9 +26,9 @@ As a first example, we run the command:
 - 2GB memory size.
 
 ### 2. System Informations
-After the execution of the above command, the files **config.ini**, **config.json** and **stats.txt** are created in the **hello_results** folder. The first two files contain a list of every object created for the simulation and the values for its parameters, just in different formats. The third one is a representation of all of the gem5 statistics registered for the simulation.
+After executing the above command, the files **config.ini**, **config.json** and **stats.txt** were created in the **hello_results** folder. The first two files contain a list of every object created for the simulation and the values for its parameters, just in different formats. The third one is a representation of all of the gem5 statistics registered for the simulation.
 
-( a ) In **config.ini** we can find the values of the parameters we set to the system:
+( a ) The file **config.ini** can verify the choices we made at the beginning, in particular:
 
 - Line 65: type=MinorCPU defines that the CPU type is Minor.
 - Line 58: clock=250 indicates that the CPU clock is set at 1000000000000 / 250 = 4GHz.
@@ -57,27 +57,22 @@ The MinorCPU is a flexible in-order processor model which was originally develop
 - **HPI CPU**
 High Performance In-Order (HPI) CPU is based on the Arm architecture and is built to represent a modern in-order Armv8-A implementation. One of its basic characteristics is that it uses the same 4-stage pipeline that is used in the Minor CPU. Moreover, there are separate instruction and data buses, hence an instruction cache (ICache) and a data cache (DCache). So, there are distinct instruction and data L1 caches backed by a unified L2 cache.
 
-( a ) In this step we write a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000. We use the instractions to compile it and then we executed in the gem5.
+( a ) In this step we wrοte a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor ***myprog/myprog_arm** and then we executed with the gem5.
 
-First we run the simulator with a **MinorCPU**, using the command:
+First we ran the simulator with a **MinorCPU**, using the command:
 
 > $ ./build/ARM/gem5.opt -d myprog_MinorCPU_result configs/example/se.py --cpu-type=MinorCPU --caches -c 'myprog/myprog_arm'
 
-The results was saved in the **myprog_MinorCPU_result** folder.
-**399326000** ticks needed.
+The results was saved in the **myprog_MinorCPU_result** folder, the execution took **399326000** ticks to complete.
 
-After we run the simulator with a **TimingSimpleCPU**, using the command:
+Then we ran the simulator with a **TimingSimpleCPU**, using the command:
 > $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c 'myprog/myprog_arm'
 
-The results was saved in the **myprog_TimingSimpleCPU_result** folder.
-**704536000** ticks needed.
+The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
 ( b ) The results show that the Minor kernel is a lot faster than the TimingSimple kernel. This is an expected result because the Minor kernel uses a 4-stage pipeline while TimingSimple doesn't. This means that in Minor kernel while one instruction is processed by the ALU the next one can be fetched.
 
 ( c )
-
-
-
 
 ### 4. Refrencess
 [1] https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
