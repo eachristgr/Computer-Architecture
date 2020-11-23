@@ -20,7 +20,7 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
  - mem-rank: The number of memory ranks per channel.
  - mem-size: The physical memory size.
  
- In the file we can also find information about the cache memory every CPU type using. The atomic type seems to have no cache, the minor and hpi have L1 instractions, L1 data, walk and L2 cache.
+ In the file we can also find information about the caches, every CPU model using. The atomic type seems to have no cache, the minor and hpi have L1 instractions, L1 data, walk and L2 cache.
  
  In our example we set the cpu parameters and leave the rest of them in their default values, as described in the **starter_se.py** file. So we expect the system to have the following features.
 
