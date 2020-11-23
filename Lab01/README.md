@@ -54,19 +54,16 @@ After executing the above command, the files **config.ini**, **config.json** and
 ( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can copmput it by collecting information from the other caches.
 
 ### 3. In-Order CPU Models
-There are 4 types of in-order CPUs. In-order means that they execute the instructions by the order they arrive to the CPU.
+Gem5 support, among other, in-order CPU types. In-order means that they execute the instructions by the order they arrive to the CPU. We gine a small description of 3 of them
 
 - **AtomicSimpleCPU**
-The AtomicSimpleCPU is an in-order model. It uses the latency estimates from the atomic accesses to estimate overall cache access time. The AtomicSimpleCPU implements functions to read and write memory, and also to tick, which defines what happens every CPU cycle. It defines the port that is used to hook up to memory, and connects the CPU to the cache [1].
+This model estimates the overall cache access time of an instructionand execute it for this period of time. The AtomicSimpleCPU implements functions to read and write memory, and also to tick, which defines what happens every CPU cycle. It defines the port that is used to hook up to memory, and connects the CPU to the cache [1].
 
 - **TimingSimpleCPU**
 The TimingSimpleCPU uses timing memory accesses. It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out [1].
 
 - **MinorCPU**
-The MinorCPU is a flexible in-order processor model which was originally developed to support the Arm ISA, and is applicable to other ISAs as well. MinorCPU has a fixed four-stage in-order execution pipeline, while having configurable data structures. The four-stage pipeline implemented by MinorCPU includes fetching lines, decomposition into macro-ops, decomposition of macro-ops into micro-ops and execute. The basic characteristic of this type of CPU is that it has configurable data structures which helps in build a memory hierarchy in order to better memory access time [2].
-
-- **HPI CPU**
-High Performance In-Order (HPI) CPU is based on the Arm architecture and is built to represent a modern in-order Armv8-A implementation. One of its basic characteristics is that it uses the same 4-stage pipeline that is used in the Minor CPU. Moreover, there are separate instruction and data buses, hence an instruction cache (ICache) and a data cache (DCache). So, there are distinct instruction and data L1 caches backed by a unified L2 cache.
+The MinorCPU is a flexible in-order processor model, has a fixed four-stage in-order execution pipeline, while having configurable data structures. Τhis strict hierarchy of the system leads to better memory access time [2].
 
 ( a ) In this step we wrοte a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
 
@@ -76,7 +73,7 @@ First we ran the simulator with a **MinorCPU**, using the command:
 $ ./build/ARM/gem5.opt -d myprog_MinorCPU_result configs/example/se.py --cpu-type=MinorCPU --caches -c 'myprog/myprog_arm'
 ```
 
-The results was saved in the **myprog_MinorCPU_result** folder, the execution took **399326000** ticks to complete.
+The results were saved in the **myprog_MinorCPU_result** folder, the execution took **399326000** ticks to complete.
 
 Then we ran the simulator with a **TimingSimpleCPU**, using the command:
 
@@ -86,7 +83,7 @@ $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --
 
 The results were saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
-( b ) The results show that the Minor kernel is a lot faster than the TimingSimple kernel. This is an expected result because the Minor kernel uses a 4-stage pipeline while TimingSimple doesn't. This means that in Minor kernel while one instruction is processed by the ALU the next one can be fetched.
+( b ) As expected the MinorCPU model is a lot faster than the TimingSimpleCPU. The strict hierarchy of MinorCPU enables it to be able to load a new instructions while another one is processed by the ALU.
 
 ( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU type, CPU fequency and memory type.
 
