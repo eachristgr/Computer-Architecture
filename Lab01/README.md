@@ -63,34 +63,30 @@ First we ran the simulator with a **MinorCPU**, using the command:
 
 > $ ./build/ARM/gem5.opt -d myprog_MinorCPU_result configs/example/se.py --cpu-type=MinorCPU --caches -c 'myprog/myprog_arm'
 
-The results was saved in the **myprog_MinorCPU_result** folder, the execution took **399.326.000** ticks to complete.
+The results was saved in the **myprog_MinorCPU_result** folder, the execution took **399326000** ticks to complete.
 
 Then we ran the simulator with a **TimingSimpleCPU**, using the command:
 > $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c 'myprog/myprog_arm'
 
-The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704.536.000** ticks to complete.
+The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
 ( b ) The results show that the Minor kernel is a lot faster than the TimingSimple kernel. This is an expected result because the Minor kernel uses a 4-stage pipeline while TimingSimple doesn't. This means that in Minor kernel while one instruction is processed by the ALU the next one can be fetched.
 
 ( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU type, CPU fequency and memory type.
 
 - For the **MinorCPU** the total ticks, for different CPU frequencies and RAM types are:
-|   | LPDDR3_1600_1x32 | DDR3_1600_8x8 | DDR4_2400_8x8 |
+|   | DDR3_1600_8x8 | DDR4_2400_8x8 | LPDDR5_5500_1x16_8B_BL32 |
 |:------:|:-----------:|:-----------:|:-----------:|
-| 2.0GHz | 191,091,000 | 184,532,000 | 183,262,000 |
-| 2.5GHz | 159,687,600 | 153,259,600 | 152,151,600 |
-| 3.0GHz | 138,839,355 | 132,709,491 | 131,277,591 |
-| 3.5GHz | 123,842,576 | 117,866,606 | 116,378,834 |
-| 4.0GHz | 112,557,000 | 106,028,000 | 105,012,000 |
+| 2.0GHz | 399326000 | 398162000 | 413587000 |
+| 3.0GHz | 310322367 | 308905452 | 325350657 |
+| 5.0GHz | 238481200 | 237581200 | 253370200 |
 
 - For the **TimingSimpleCPU** the total ticks, for different CPU frequencies and RAM types are:
-|   | LPDDR3_1600_1x32 | DDR3_1600_8x8 | DDR4_2400_8x8 |
+|   | DDR3_1600_8x8 | DDR4_2400_8x8 | LPDDR5_5500_1x16_8B_BL32 |
 |:------:|:-----------:|:-----------:|:-----------:|
-| 2.0GHz | 191,091,000 | 184,532,000 | 183,262,000 |
-| 2.5GHz | 159,687,600 | 153,259,600 | 152,151,600 |
-| 3.0GHz | 138,839,355 | 132,709,491 | 131,277,591 |
-| 3.5GHz | 123,842,576 | 117,866,606 | 116,378,834 |
-| 4.0GHz | 112,557,000 | 106,028,000 | 105,012,000 |
+| 2.0GHz | 704536000 | 704414000 | 717126000 |
+| 3.0GHz | 492434073 | 491913261 | 504191304 |
+| 5.0GHz | 320275000 | 319654000 | 332275000 |
 
 ### 4. Refrencess
 [1] https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
