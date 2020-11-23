@@ -25,6 +25,7 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
 - 1 CPU core.
 - DDR3_1600_8x8 memory type.
 - 2 memory channels.
+- None memory ranks per channel.
 - 2GB memory size.
 
 ### 2. System Informations
