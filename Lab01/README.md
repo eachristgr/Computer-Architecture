@@ -62,7 +62,7 @@ This model estimates the overall cache access time of an instruction and execute
 The TimingSimpleCPU uses timing memory accesses. It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out [1].
 
 - **MinorCPU**
-The MinorCPU is a flexible in-order processor model, has a fixed four-stage in-order execution pipeline, while having configurable data structures. Τhis strict hierarchy of the system leads to better memory access time [2].
+The MinorCPU is a flexible in-order processor model, has a fixed four-stage in-order execution pipeline, while having configurable data structures. Τhis hierarchy of the system leads to better memory access time [2].
 
 ( a ) In this step we wrοte a simple program in C, **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
 
@@ -82,7 +82,7 @@ $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --
 
 The results were saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
-( b ) As expected the MinorCPU model is a lot faster than the TimingSimpleCPU. The strict hierarchy of MinorCPU enables it to be able to load a new instructions while another one is processed by the ALU.
+( b ) As expected the MinorCPU model is a lot faster than the TimingSimpleCPU. The hierarchy of MinorCPU enables it to be able to load a new instructions while another one is processed by the ALU.
 
 ( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU models, CPU fequency and memory type.
 
