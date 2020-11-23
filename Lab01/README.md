@@ -4,7 +4,9 @@ This file contains the contains the results of the first lab exercise.
 ### 1. Configure Parameters
 As a first example, we ran the command:
 
- > $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
+```bash
+$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
+```
  
  We used the file **starter_se.py** to set the parameters of the system we want to emulate with gem5. These parameters are:
  
@@ -40,8 +42,6 @@ After executing the above command, the files **config.ini**, **config.json** and
 
 ( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, the number of overall (read+write) accesses to L2 cache is **479**.
 
-This number can also....
-
 ### 3. In-Order CPU Models
 There are 4 types of in-order CPUs. In-order means that they execute the instructions by the order they arrive to the CPU.
 
@@ -61,12 +61,17 @@ High Performance In-Order (HPI) CPU is based on the Arm architecture and is buil
 
 First we ran the simulator with a **MinorCPU**, using the command:
 
-> $ ./build/ARM/gem5.opt -d myprog_MinorCPU_result configs/example/se.py --cpu-type=MinorCPU --caches -c 'myprog/myprog_arm'
+```bash
+$ ./build/ARM/gem5.opt -d myprog_MinorCPU_result configs/example/se.py --cpu-type=MinorCPU --caches -c 'myprog/myprog_arm'
+```
 
 The results was saved in the **myprog_MinorCPU_result** folder, the execution took **399326000** ticks to complete.
 
 Then we ran the simulator with a **TimingSimpleCPU**, using the command:
-> $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c 'myprog/myprog_arm'
+
+```bash
+$ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c 'myprog/myprog_arm'
+```
 
 The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
