@@ -50,7 +50,7 @@ After executing the above command, the files **config.ini**, **config.json** and
 
 ( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**.
 
-( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can comput it by collecting information from the other caches.
+( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.
 
 ### 3. In-Order CPU Models
 Gem5 supports, among others, in-order CPU models. In-order means that they execute the instructions by the order they arrive to the CPU. We give a small description of 3 of them:
