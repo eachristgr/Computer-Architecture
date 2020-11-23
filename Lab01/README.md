@@ -54,10 +54,10 @@ After executing the above command, the files **config.ini**, **config.json** and
 ( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can copmput it by collecting information from the other caches.
 
 ### 3. In-Order CPU Models
-Gem5 support, among other, in-order CPU types. In-order means that they execute the instructions by the order they arrive to the CPU. We gine a small description of 3 of them
+Gem5 supports, among others, in-order CPU models. In-order means that they execute the instructions by the order they arrive to the CPU. We give a small description of 3 of them:
 
 - **AtomicSimpleCPU**
-This model estimates the overall cache access time of an instructionand execute it for this period of time. The AtomicSimpleCPU implements functions to read and write memory, and also to tick, which defines what happens every CPU cycle. It defines the port that is used to hook up to memory, and connects the CPU to the cache [1].
+This model estimates the overall cache access time of an instruction and execute it for this period of time. The AtomicSimpleCPU implements functions to read and write memory, and also to tick, which defines what happens every CPU cycle. It defines the port that is used to hook up to memory, and connects the CPU to the cache [1].
 
 - **TimingSimpleCPU**
 The TimingSimpleCPU uses timing memory accesses. It stalls on cache accesses and waits for the memory system to respond prior to proceeding. Like the AtomicSimpleCPU, the TimingSimpleCPU implements the same set of functions. It defines the port that is used to hook up to memory, and connects the CPU to the cache. It also defines the necessary functions for handling the response from memory to the accesses sent out [1].
@@ -85,7 +85,7 @@ The results were saved in the **myprog_TimingSimpleCPU_result** folder, the exec
 
 ( b ) As expected the MinorCPU model is a lot faster than the TimingSimpleCPU. The strict hierarchy of MinorCPU enables it to be able to load a new instructions while another one is processed by the ALU.
 
-( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU type, CPU fequency and memory type.
+( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU models, CPU fequency and memory type.
 
 - For the **MinorCPU** the total ticks, for different CPU frequencies and memory types are:
 
