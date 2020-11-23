@@ -1,4 +1,8 @@
 # Lab01_Report
+Team 9
+Christos Emmanouil
+Chatzipemou Aristidis
+
 This file contains the contains the results of the first lab exercise.
 
 ### 1. Configure Parameters
@@ -18,6 +22,8 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
  - mem-rank: The number of memory ranks per channel.
  - mem-size: The physical memory size.
  
+ In the file we can also find information about the cache memory every CPU type using. The atomic type seems to have no cache, the minor and hpi have L1 instractions, L1 data, walk and L2 cache.
+ 
  In our example we set the cpu parameters and leave the rest of them in their default values, as described in the **starter_se.py** file. So we expect the system to have the following features.
 
 - Minor CPU type.
@@ -25,7 +31,6 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
 - 1 CPU core.
 - DDR3_1600_8x8 memory type.
 - 2 memory channels.
-- None memory ranks per channel.
 - 2GB memory size.
 
 ### 2. System Informations
@@ -33,15 +38,20 @@ After executing the above command, the files **config.ini**, **config.json** and
 
 ( a ) The file **config.ini** can verify the choices we made at the beginning, in particular:
 
-- Line 65: type=MinorCPU defines that the CPU type is Minor.
-- Line 58: clock=250 indicates that the CPU clock is set at 1000000000000 / 250 = 4GHz.
-- Line 113: numThreads=1 defines the use of just one core for the execution.
-- Lines 1427, 1557: ranks_per_channel=2 is the default number of memory ranks per channel. The memory channels have the names defined in line 13.
-- Line 21: mem_ranges=0:2147483648 defines 2GB of memory size.
+- In line 13 we can see that the system has 2 memory channels.
+- In line 15 we can see that the cache line size is 64.
+- In line 21 the memory addresses start from 0 and ends in 2147483648. A range that corresponds to 2GB of memory.
+- In line 58 we can see that the CPU clock ticks every 250 ticks of the system, so the CPU frequency is 4GHz.
+- In line 65 the CPU type is MinorCPU.
+- In line 116 the numThreads=1 defines the use of just one core for the execution.
+- In line 183 and 222 we can see that the dcache size is 32768 bytes.
+- In line 260 we can see the range of the walker cache.
+- In line 911 the range of icache is mentioned.
+- In line 911 we can see that the icache size is 49152 bytes. 
 
 ( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**.
 
-( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.
+( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can copmput it by collecting information from the other caches.
 
 ### 3. In-Order CPU Models
 There are 4 types of in-order CPUs. In-order means that they execute the instructions by the order they arrive to the CPU.
