@@ -90,6 +90,10 @@ The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execu
 | 3.0GHz | 492434073 | 491913261 | 504191304 |
 | 5.0GHz | 320275000 | 319654000 | 332275000 |
 
+As we can see, the CPU type and the frequency are the most segnificant parameters. MinorCPU is a alot faster than TimingSimpleCPU and with the increase of frequency the speed of the system rises. Also the memory type make changes in the system perfomance, too.
+
+The results are also saved in the **myprog_CPU_FRQ_MEM_result** folder.
+
 ### 4. Refrencess
 [1] https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
 
