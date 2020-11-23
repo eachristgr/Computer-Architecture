@@ -57,7 +57,7 @@ The MinorCPU is a flexible in-order processor model which was originally develop
 - **HPI CPU**
 High Performance In-Order (HPI) CPU is based on the Arm architecture and is built to represent a modern in-order Armv8-A implementation. One of its basic characteristics is that it uses the same 4-stage pipeline that is used in the Minor CPU. Moreover, there are separate instruction and data buses, hence an instruction cache (ICache) and a data cache (DCache). So, there are distinct instruction and data L1 caches backed by a unified L2 cache.
 
-( a ) In this step we wrοte a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor ***myprog/myprog_arm** and then we executed with the gem5.
+( a ) In this step we wrοte a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
 
 First we ran the simulator with a **MinorCPU**, using the command:
 
