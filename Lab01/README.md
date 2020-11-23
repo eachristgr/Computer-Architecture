@@ -2,7 +2,7 @@
 This file contains the contains the results of the first lab exercise.
 
 ### 1. Configure Parameters
-As a first example, we run the command:
+As a first example, we ran the command:
 
  > $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
  
