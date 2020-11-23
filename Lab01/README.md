@@ -1,5 +1,5 @@
 # Lab01_Report
-**Christos Emmanouil, Chatzipemou Aristidis**
+**Christos Emmanouil, Chatzipemou Aristeidis**
 
 This file contains the contains the results of the first lab exercise.
 
