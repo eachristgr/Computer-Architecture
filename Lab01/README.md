@@ -80,7 +80,7 @@ The results were saved in the **myprog_TimingSimpleCPU_result** folder, the exec
 
 ( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU type, CPU fequency and memory type.
 
-- For the **MinorCPU** the total ticks, for different CPU frequencies and RAM types are:
+- For the **MinorCPU** the total ticks, for different CPU frequencies and memory types are:
 
 |   | DDR3_1600_8x8 | DDR4_2400_8x8 | LPDDR5_5500_1x16_8B_BL32 |
 |:------:|:-----------:|:-----------:|:-----------:|
@@ -88,7 +88,7 @@ The results were saved in the **myprog_TimingSimpleCPU_result** folder, the exec
 | 3.0GHz | 310322367 | 308905452 | 325350657 |
 | 5.0GHz | 238481200 | 237581200 | 253370200 |
 
-- For the **TimingSimpleCPU** the total ticks, for different CPU frequencies and RAM types are:
+- For the **TimingSimpleCPU** the total ticks, for different CPU frequencies and memory types are:
 
 |   | DDR3_1600_8x8 | DDR4_2400_8x8 | LPDDR5_5500_1x16_8B_BL32 |
 |:------:|:-----------:|:-----------:|:-----------:|
