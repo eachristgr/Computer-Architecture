@@ -1,10 +1,12 @@
 # Lab01_Report
+This file contains the contains the results of the first lab exercise.
+
 ### 1. Configure Parameters
-As first example, we run the command:
+As a first example, we run the command:
 
  > $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
  
- The file **starter_se.py** helps us set the parameters of the system. These parameters are:
+ We used the file **starter_se.py** to set the parameters of the system we want to emulate with gem5. These parameters are:
  
  - cpu: The type of CPU kernel. It can be atomic, minor or hpi.
  - cpu-freq: The CPU clock frequency.
@@ -14,7 +16,7 @@ As first example, we run the command:
  - mem-rank: The number of memory ranks per channel.
  - mem-size: The physical memory size.
  
- We can set values to these parameters or we can leave the default values. So, in our example the system must have the following characteristics:
+ In our example we set the cpu parameters and leave the rest of them in their default values, as described in the **starter_se.py** file. So we expect the system to have the following features.
 
 - Minor CPU type.
 - 4GHz CPU clock frequency.
