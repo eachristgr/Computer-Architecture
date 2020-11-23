@@ -1,7 +1,7 @@
 # Lab01_Report
-Team 9
-Christos Emmanouil
-Chatzipemou Aristidis
+>Team 9
+>Christos Emmanouil
+>Chatzipemou Aristidis
 
 This file contains the contains the results of the first lab exercise.
 
