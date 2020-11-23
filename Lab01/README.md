@@ -79,6 +79,7 @@ The results was saved in the **myprog_TimingSimpleCPU_result** folder.
 
 ### 4. Refrencess
 [1] https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
+
 [2] https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu
 
 
