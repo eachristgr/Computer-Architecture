@@ -65,7 +65,7 @@ The TimingSimpleCPU uses timing memory accesses. It stalls on cache accesses and
 - **MinorCPU**
 The MinorCPU is a flexible in-order processor model, has a fixed four-stage in-order execution pipeline, while having configurable data structures. Τhis strict hierarchy of the system leads to better memory access time [2].
 
-( a ) In this step we wrοte a simple program in C **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
+( a ) In this step we wrοte a simple program in C, **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
 
 First we ran the simulator with a **MinorCPU**, using the command:
 
