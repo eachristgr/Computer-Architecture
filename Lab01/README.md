@@ -42,10 +42,11 @@ After executing the above command, the files **config.ini**, **config.json** and
 - In line 58 we can see that the CPU clock ticks every 250 ticks of the system, so the CPU frequency is 4GHz.
 - In line 65 the CPU type is MinorCPU.
 - In line 116 the numThreads = 1 defines the use of just one core for the execution.
-- In line 183 and 222 we can see that the dcache size is 32768 bytes.
+- In lines 183 and 222 we can see that the dcache size is 32768 bytes.
 - In line 260 we can see the range of the walker cache.
 - In line 911 the range of icache is mentioned.
-- In line 911 we can see that the icache size is 49152 bytes. 
+- In line 929 we can see that the icache size is 49152 bytes.
+- In line 1427 and 1557 the ranks_per_channel = 2 gives us the number of ranks in both channels.
 
 ( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**.
 
