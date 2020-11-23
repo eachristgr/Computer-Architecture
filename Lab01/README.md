@@ -43,7 +43,7 @@ After executing the above command, the files **config.ini**, **config.json** and
 - In line 21 the memory addresses start from 0 and ends in 2147483648. A range that corresponds to 2GB of memory.
 - In line 58 we can see that the CPU clock ticks every 250 ticks of the system, so the CPU frequency is 4GHz.
 - In line 65 the CPU type is MinorCPU.
-- In line 116 the numThreads=1 defines the use of just one core for the execution.
+- In line 116 the numThreads = 1 defines the use of just one core for the execution.
 - In line 183 and 222 we can see that the dcache size is 32768 bytes.
 - In line 260 we can see the range of the walker cache.
 - In line 911 the range of icache is mentioned.
@@ -51,7 +51,7 @@ After executing the above command, the files **config.ini**, **config.json** and
 
 ( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**.
 
-( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can copmput it by collecting information from the other caches.
+( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.  If this value can not be accessed, we can comput it by collecting information from the other caches.
 
 ### 3. In-Order CPU Models
 Gem5 supports, among others, in-order CPU models. In-order means that they execute the instructions by the order they arrive to the CPU. We give a small description of 3 of them:
