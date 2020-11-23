@@ -39,9 +39,9 @@ After executing the above command, the files **config.ini**, **config.json** and
 - Lines 1427, 1557: ranks_per_channel=2 is the default number of memory ranks per channel. The memory channels have the names defined in line 13.
 - Line 21: mem_ranges=0:2147483648 defines 2GB of memory size.
 
-( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, the number of instructions committed is **5028**.
+( b ) In the file **stats.txt** in line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**.
 
-( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, the number of overall (read+write) accesses to L2 cache is **479**.
+( c ) In the file **stats.txt** in line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**.
 
 ### 3. In-Order CPU Models
 There are 4 types of in-order CPUs. In-order means that they execute the instructions by the order they arrive to the CPU.
