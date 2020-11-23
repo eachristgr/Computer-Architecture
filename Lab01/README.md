@@ -74,7 +74,7 @@ Then we ran the simulator with a **TimingSimpleCPU**, using the command:
 $ ./build/ARM/gem5.opt -d myprog_TimingSimpleCPU_result configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c 'myprog/myprog_arm'
 ```
 
-The results was saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
+The results were saved in the **myprog_TimingSimpleCPU_result** folder, the execution took **704536000** ticks to complete.
 
 ( b ) The results show that the Minor kernel is a lot faster than the TimingSimple kernel. This is an expected result because the Minor kernel uses a 4-stage pipeline while TimingSimple doesn't. This means that in Minor kernel while one instruction is processed by the ALU the next one can be fetched.
 
