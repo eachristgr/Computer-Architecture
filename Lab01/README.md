@@ -48,7 +48,7 @@ After executing the above command, the files **config.ini**, **config.json** and
 - In line 929 we can see that the icache size is 49152 bytes.
 - In line 1427 and 1557 the ranks_per_channel = 2 gives us the number of ranks in both channels.
 
-( b ) In the file **stats.txt** the line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**. Although in line 15 system.cpu_cluster.cpus.committedOps we can see that the total number of committed operations is **5834**. These numbers are differents because, in the second one, extra 806 micro operations are included.
+( b ) In the file **stats.txt** the line 14 system.cpu_cluster.cpus.committedInsts, shows that the number of instructions committed is **5028**. Although in line 15 system.cpu_cluster.cpus.committedOps we can see that the total number of committed operations is **5834**. These numbers differ because, in the second one, extra 806 micro operations are included.
 
 ( c ) In the file **stats.txt** the line 493 system.cpu_cluster.l2.overall_accesses::total, shows that the number of overall (read+write) accesses to L2 cache is **479**. Although if this number does not exist in the file, we can compute it by adding the numbers of overall (read+write) accesses to L2 for instructions (line 491) and data (line 492), in our case **332 + 147 = 479**.
 
