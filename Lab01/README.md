@@ -9,9 +9,9 @@ As a first example, we ran the command:
 ```bash
 $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
 ```
- 
+
  We used the file **starter_se.py** to set the parameters of the system we want to emulate with gem5. These parameters are:
- 
+
  - cpu: The type of CPU kernel. It can be atomic, minor or hpi.
  - cpu-freq: The CPU clock frequency.
  - num-cores: The number of CPU cores.
@@ -19,9 +19,9 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
  - mem-channels: The number of memory channels.
  - mem-rank: The number of memory ranks per channel.
  - mem-size: The physical memory size.
- 
- In the file we can also find information about the caches, every CPU model using. The atomic type seems to have no cache, the minor and hpi have L1 instractions, L1 data, walk and L2 cache.
- 
+
+ In the file we can also find information about the caches, every CPU model using. The atomic type seems to have no cache, the minor and hpi have L1 instructions, L1 data, walk and L2 caches.
+
  In our example we set the cpu parameters and leave the rest of them in their default values, as described in the **starter_se.py** file. So we expect the system to have the following features.
 
 - Minor CPU type.
@@ -31,7 +31,7 @@ $ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="
 - 2 memory channels.
 - 2GB memory size.
 
-### 2. System Informations
+### 2. System Information
 After executing the above command, the files **config.ini**, **config.json** and **stats.txt** were created in the **hello_results** folder. The first two files contain a list of every object created for the simulation and the values for its parameters, just in different formats. The third one is a representation of all of the gem5 statistics registered for the simulation.
 
 ( a ) The file **config.ini** can verify the choices we made at the beginning, in particular:
@@ -64,7 +64,7 @@ The TimingSimpleCPU uses timing memory accesses. It stalls on cache accesses and
 - **MinorCPU**
 The MinorCPU is a flexible in-order processor model, has a fixed four-stage in-order execution pipeline, while having configurable data structures. Τhis hierarchy of the system leads to better memory access time [2].
 
-( a ) In this step we wrοte a simple program in C, **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instractions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
+( a ) In this step we wrote a simple program in C, **myprog/myprog.c** that prints the odd numbers between 1 and 1000, we used the instructions to compile it for an arm processor **myprog/myprog_arm** and then we executed with the gem5.
 
 First we ran the simulator with a **MinorCPU**, using the command:
 
@@ -84,7 +84,7 @@ The results were saved in the **myprog_TimingSimpleCPU_result** folder, the exec
 
 ( b ) As expected the MinorCPU model is a lot faster than the TimingSimpleCPU. The hierarchy of MinorCPU enables it to be able to load a new instructions while another one is processed by the ALU.
 
-( c ) In order to see how different parameters affect the system, we ran the emulator with diffenert values of CPU models, CPU fequency and memory type.
+( c ) In order to see how different parameters affect the system, we ran the emulator with different values of CPU models, CPU frequency and memory type.
 
 - For the **MinorCPU** the total ticks, for different CPU frequencies and memory types are:
 
@@ -102,13 +102,11 @@ The results were saved in the **myprog_TimingSimpleCPU_result** folder, the exec
 | 3.0GHz | 492434073 | 491913261 | 504191304 |
 | 5.0GHz | 320275000 | 319654000 | 332275000 |
 
-As we can see, the CPU type and the frequency are the most segnificant parameters. MinorCPU is a alot faster than TimingSimpleCPU and with the increase of frequency the speed of the system rises. Also the memory type make changes in the system perfomance, too.
+As we can see, the CPU type and the frequency are the most significant parameters. MinorCPU is a a lot faster than TimingSimpleCPU and with the increase of frequency the speed of the system rises. Also the memory type make changes in the system performance, too.
 
 The results are also saved in the **myprog_CPU_FRQ_MEM_result** folder.
 
-### 4. Refrencess
+### 4. References
 [1] https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
 
 [2] https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu
-
-
