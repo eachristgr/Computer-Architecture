@@ -22,7 +22,7 @@ $ ./build/ARM/gem5.opt -d LAB_02/spec_results/specsjeng configs/example/se.py --
 
 $ ./build/ARM/gem5.opt -d LAB_02/spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
-The results of these simulations were saved in the **spec_results** folder. 
+The results of these simulations were saved in the **step01/spec_results_2GHz** folder. 
 
 #### 1.1. Simulations Information
 
@@ -42,7 +42,7 @@ As in the first lab, we used the files **config.ini** to figure out parameters a
 
 Note that caches sizes are measured in bytes.
 
-More information about the location of these values in the config.ini files can be found in the **FILE_DIR**.
+More information about the location of these values in the config.ini files can be found in the **step01/1_1_results.txt** file.
 
 #### 1.2. Benchmarks Stats
 
@@ -58,17 +58,17 @@ At this point, we used the **stats.txt** files to extract some useful benchmark 
 
 Note that simulation time is the time required for the program to run in the simulation and is measured in seconds.
 
-More information about the location of these values in the stats.txt files can be found in the **FILE_DIR**, however a visual representation would make comparison easier, so the following diagrams are presented:
+More information about the location of these values in the stats.txt files can be found in the **step01/1_2_results.txt** file, however a visual representation would make comparison easier, so the following diagrams are presented:
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_SimulationTime.png" alt="BenchmarksComparation_SimulationTime" style="zoom:100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_SimulationTime.png?raw=true" />
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_CPI.png" alt="BenchmarksComparation_CPI" style="zoom:100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_CPI.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L1DMissRate.png" alt="BenchmarksComparation_L1DMissRate"  />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L1DMissRate.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L1IMissRate.png" alt="BenchmarksComparation_L1IMissRate"  />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L1IMissRate.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L2MissRate.png" alt="BenchmarksComparation_L2MissRate" style="zoom: 100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L2MissRate.png?raw=true" /> 
 
 By observing the data, we see that higher CPI leads to higher simulation times. As it seems the main reason for high CPI are the caches misses. L2 cache miss rates are higher than L1 cache miss rates. In the sjeng benchmark, where L1_Data cache and L2 cache miss rates are higher than the other benchmarks the simulation time is much worse.
 
@@ -90,13 +90,13 @@ $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/specsjeng configs/example/se.
 $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/speclibm configs/example/se.py --cpu-type=MinorCPU --cpu-clock=1GHz --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
 
-The results of these simulations were saved in the **spec_results_1GHz** folder.
+The results of these simulations were saved in the **step01/spec_results_1GHz** folder.
 
-To summarize the results and compare them with the previous simulations we quote the following diagrams: 
+To summarize the results and compare them with the previous simulations we quote the following diagrams:
 
-![BenchmarksComparation_SimulationTime](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_3/1_3_plots/BenchmarksComparation_SimulationTime.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_3_plots/BenchmarksComparation_SimulationTime.png?raw=true" />
 
-![BenchmarksComparation_CPI](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_3/1_3_plots/BenchmarksComparation_CPI.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_3_plots/BenchmarksComparation_CPI.png?raw=true" /> 
 
 Note that the miss rates of caches remain the same, so there is no point in presenting them.
 
@@ -152,7 +152,7 @@ In order to study the effect of the parameters, a reference system with the valu
 
 Then a set of bash scripts was created in order to run its benchmark in systems with different parameters. Each system created differed from the original only in the value of one parameter. So the results showed which parameters most affect the performance in each benchmark.
 
-The bash scripts are in the **FOLDER_DIR** folder, the simulations files in the **Folder_DIR** folder and the results are listed in the **Files_dir** files.
+The bash scripts are in the **step02/bash_scripts/stage1** folder, the simulations files in the **Folder_DIR** folder and the results are listed in the **Files_dir** files.
 
 Having a better idea of the problem, new bash scripts were created in order to run the benchmarks on systems that differ more from the reference system.
 
@@ -172,9 +172,9 @@ From the first results it was found out that:
 
 Below are graphs showing the effect of the cache line size and the L1_Data cache size on the CPI of the respective benchmarks.
 
-![CPI vs Cache Line Size](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/CPI vs Cache Line Size.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
 
-![CPI vs L1_Data Cache Size](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/CPI vs L1_Data Cache Size.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Size.png?raw=true" /> 
 
 It is noted that other parameters can also affect performance, however these have had the greatest impact.
 
@@ -192,8 +192,8 @@ Taking into account the results of both the above stage and the execution stage 
 
 The following diagrams compare these systems and the references ones with the Simulation Time and the CPI :
 
-![Ref_Opt_SimSec](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/Ref_Opt_SimSec.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_SimSec.png?raw=true" /> 
 
-![Ref_Opt_CPI](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/Ref_Opt_CPI.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_CPI.png?raw=true" /> 
 
 As can be seen from the diagrams greater improvement was made in jseng and libm benchmarks. Recall that these two had quite high L2 cache miss rate. The increase in size and associativity of the L2 cache as well in size of the cache line led to the fall of L2 cache miss rates resulting in lower simulation times and CPIs.
