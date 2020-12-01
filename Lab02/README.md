@@ -22,7 +22,7 @@ $ ./build/ARM/gem5.opt -d LAB_02/spec_results/specsjeng configs/example/se.py --
 
 $ ./build/ARM/gem5.opt -d LAB_02/spec_results/speclibm configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
-The results of these simulations were saved in the **spec_results** folder. 
+The results of these simulations were saved in the **step01/spec_results_2GHz** folder. 
 
 #### 1.1. Simulations Information
 
@@ -42,7 +42,7 @@ As in the first lab, we used the files **config.ini** to figure out parameters a
 
 Note that caches sizes are measured in bytes.
 
-More information about the location of these values in the config.ini files can be found in the **FILE_DIR**.
+More information about the location of these values in the config.ini files can be found in the **step01/1_1_results.txt** file.
 
 #### 1.2. Benchmarks Stats
 
@@ -58,7 +58,7 @@ At this point, we used the **stats.txt** files to extract some useful benchmark 
 
 Note that simulation time is the time required for the program to run in the simulation and is measured in seconds.
 
-More information about the location of these values in the stats.txt files can be found in the **FILE_DIR**, however a visual representation would make comparison easier, so the following diagrams are presented:
+More information about the location of these values in the stats.txt files can be found in the **step01/1_2_results.txt** file, however a visual representation would make comparison easier, so the following diagrams are presented:
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_SimulationTime.png?raw=true" />
 
@@ -90,7 +90,7 @@ $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/specsjeng configs/example/se.
 $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/speclibm configs/example/se.py --cpu-type=MinorCPU --cpu-clock=1GHz --caches --l2cache -c spec_cpu2006/470.lbm/src/speclibm -o "20 spec_cpu2006/470.lbm/data/lbm.in 0 1 spec_cpu2006/470.lbm/data/100_100_130_cf_a.of" -I 100000000
 ```
 
-The results of these simulations were saved in the **spec_results_1GHz** folder.
+The results of these simulations were saved in the **step01/spec_results_1GHz** folder.
 
 To summarize the results and compare them with the previous simulations we quote the following diagrams:
 
@@ -152,7 +152,7 @@ In order to study the effect of the parameters, a reference system with the valu
 
 Then a set of bash scripts was created in order to run its benchmark in systems with different parameters. Each system created differed from the original only in the value of one parameter. So the results showed which parameters most affect the performance in each benchmark.
 
-The bash scripts are in the **FOLDER_DIR** folder, the simulations files in the **Folder_DIR** folder and the results are listed in the **Files_dir** files.
+The bash scripts are in the **step02/bash_scripts/stage1** folder, the simulations files in the **Folder_DIR** folder and the results are listed in the **Files_dir** files.
 
 Having a better idea of the problem, new bash scripts were created in order to run the benchmarks on systems that differ more from the reference system.
 
