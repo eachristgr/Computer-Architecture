@@ -1,0 +1,36 @@
+## stats for the emulatios
+
+# specbzip
+Simulation Time			=	(line 12)	sim_seconds					=	0.083718
+CPI				=	(line 16)	system.cpu.cpi					=	1.674353 
+L1_Data cache miss rate		=	(line 124)	system.cpu.dcache.overall_miss_rate::total	=	0.014248
+L1_Instruction cache miss rate	=	(line 331)	system.cpu.icache.overall_miss_rate::total	=	0.000077
+L2 cache miss rate		=	(line 494)	system.l2.overall_miss_rate::total		=	0.295243 
+
+# spechmmer
+Simulation Time			=	(line 12)	sim_seconds					=	0.059390
+CPI				=	(line 16)	system.cpu.cpi					=	1.187803 
+L1_Data cache miss rate		=	(line 124)	system.cpu.dcache.overall_miss_rate::total	=	0.001628
+L1_Instruction cache miss rate	=	(line 348)	system.cpu.icache.overall_miss_rate::total	=	0.000212
+L2 cache miss rate		=	(line 512)	system.l2.overall_miss_rate::total		=	0.078296 
+
+# speclibm
+Simulation Time			=	(line 12)	sim_seconds					=	0.174771
+CPI				=	(line 16)	system.cpu.cpi					=	3.495428 
+L1_Data cache miss rate		=	(line 124)	system.cpu.dcache.overall_miss_rate::total	=	0.060972
+L1_Instruction cache miss rate	=	(line 331)	system.cpu.icache.overall_miss_rate::total	=	0.000093
+L2 cache miss rate		=	(line 493)	system.l2.overall_miss_rate::total		=	0.999944 
+
+# specmcf
+Simulation Time			=	(line 12)	sim_seconds					=	0.064937
+CPI				=	(line 16)	system.cpu.cpi					=	1.298734 
+L1_Data cache miss rate		=	(line 124)	system.cpu.dcache.overall_miss_rate::total	=	0.002079
+L1_Instruction cache miss rate	=	(line 332)	system.cpu.icache.overall_miss_rate::total	=	0.023610
+L2 cache miss rate		=	(line 496)	system.l2.overall_miss_rate::total		=	0.055082 
+
+# specsjeng
+Simulation Time			=	(line 12)	sim_seconds					=	0.513811
+CPI				=	(line 16)	system.cpu.cpi					=	10.276223 
+L1_Data cache miss rate		=	(line 124)	system.cpu.dcache.overall_miss_rate::total	=	0.121831
+L1_Instruction cache miss rate	=	(line 329)	system.cpu.icache.overall_miss_rate::total	=	0.000020
+L2 cache miss rate		=	(line 491)	system.l2.overall_miss_rate::total		=	0.999972

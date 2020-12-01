@@ -1,0 +1,71 @@
+### CPU cahes info
+
+## e.x. config.ini for specbzip
+[system]
+line 15 cache_line_size=64
+
+[system.cpu]
+line 51 type=MinorCPU
+
+[system.cpu.dcache]
+line 151 addr_ranges=0:18446744073709551615
+line 152 assoc=2
+line 169 size=65536
+
+[system.cpu.dcache.tags]
+line 198 assoc=2
+line 199 block_size=64
+line 201 entry_size=64
+line 208 size=65536
+
+[system.cpu.dcache.tags.indexing_policy]
+line 215 assoc=2
+line 216 entry_size=64
+line 218 size=65536
+
+[system.cpu.icache]
+line 815 addr_ranges=0:18446744073709551615
+line 816 assoc=2
+line 833 size=32768
+
+[system.cpu.icache.tags]
+line 862 assoc=2
+line 863 block_size=64
+line 865 entry_size=64
+line 872 size=32768
+
+[system.cpu.icache.tags.indexing_policy]
+line 879 assoc=2
+line 880 entry_size=64
+line 882 size=32768
+
+[system.cpu_clk_domain]
+line 1038 clock=500
+
+[system.l2]
+line 1060 addr_ranges=0:18446744073709551615
+line 1061 assoc=8
+line 1078 size=2097152
+
+[system.l2.tags]
+line 1107 assoc=8
+line 1108 block_size=64
+line 1110 entry_size=64
+line 1117 ize=2097152
+
+[system.l2.tags.indexing_policy]
+line 1124 assoc=8
+line 1125 entry_size=64
+line 1127 size=2097152
+
+## results
+# specbzip / spechmmer / speclibm / specmcf / specsjeng
+CPU type				=	MinorCPU	(line 51)
+CPU clock				=	500		(line 1038)
+Cache line size				=	64		(line 15)
+L1_Instuction cache size		=	32768		(line 833)
+L1_Instuction cache associativity	=	2		(line 816)
+L1_Data cache size			=	65536		(line 169)
+L1_Data cache associativity		=	2		(line 152)
+L2 cache size				=	2097152		(line 1078)
+L2 cache associativity			=	8		(line 1061)
