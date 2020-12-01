@@ -172,9 +172,9 @@ From the first results it was found out that:
 
 Below are graphs showing the effect of the cache line size and the L1_Data cache size on the CPI of the respective benchmarks.
 
-![CPI vs Cache Line Size](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/CPI vs Cache Line Size.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
 
-![CPI vs L1_Data Cache Size](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/CPI vs L1_Data Cache Size.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Size.png?raw=true" /> 
 
 It is noted that other parameters can also affect performance, however these have had the greatest impact.
 
@@ -192,8 +192,8 @@ Taking into account the results of both the above stage and the execution stage 
 
 The following diagrams compare these systems and the references ones with the Simulation Time and the CPI :
 
-![Ref_Opt_SimSec](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/Ref_Opt_SimSec.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_SimSec.png?raw=true" /> 
 
-![Ref_Opt_CPI](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/Step_02/step_02_results/plots/Ref_Opt_CPI.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_CPI.png?raw=true" /> 
 
 As can be seen from the diagrams greater improvement was made in jseng and libm benchmarks. Recall that these two had quite high L2 cache miss rate. The increase in size and associativity of the L2 cache as well in size of the cache line led to the fall of L2 cache miss rates resulting in lower simulation times and CPIs.
