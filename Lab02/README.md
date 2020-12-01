@@ -152,11 +152,11 @@ In order to study the effect of the parameters, a reference system with the valu
 
 Then a set of bash scripts was created in order to run its benchmark in systems with different parameters. Each system created differed from the original only in the value of one parameter. So the results showed which parameters most affect the performance in each benchmark.
 
-The bash scripts are in the **step02/bash_scripts/stage1** folder, the simulations files in the **Folder_DIR** folder and the results are listed in the **Files_dir** files.
+The bash scripts are in the **step02/bash_scripts/stage1** folder, the simulations files in the **step02/simulations_files_results** folder and the results are listed in the **results_all.txt** files inside the benchmarks subfolders.
 
 Having a better idea of the problem, new bash scripts were created in order to run the benchmarks on systems that differ more from the reference system.
 
-The second bash scripts are in the **FOLDER_DIR** folder, the second new simulations files in the **Folder_DIR** folder and the second results are listed in the **Files_dir** files.
+The second bash scripts are in the **step02/bash_scripts/stage2** folder, the second simulations files and their results are stored in the same location as before but their subfolder have different name format.
 
 #### 2.2. Results Of The Study
 
