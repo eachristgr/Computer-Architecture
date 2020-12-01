@@ -60,15 +60,15 @@ Note that simulation time is the time required for the program to run in the sim
 
 More information about the location of these values in the stats.txt files can be found in the **FILE_DIR**, however a visual representation would make comparison easier, so the following diagrams are presented:
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_SimulationTime.png" alt="BenchmarksComparation_SimulationTime" style="zoom:100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_SimulationTime.png?raw=true" />
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_CPI.png" alt="BenchmarksComparation_CPI" style="zoom:100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_CPI.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L1DMissRate.png" alt="BenchmarksComparation_L1DMissRate"  />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L1DMissRate.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L1IMissRate.png" alt="BenchmarksComparation_L1IMissRate"  />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L1IMissRate.png?raw=true" /> 
 
-<img src="/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_2_Results/1_2_plots/BenchmarksComparation_L2MissRate.png" alt="BenchmarksComparation_L2MissRate" style="zoom: 100%;" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_2_plots/BenchmarksComparation_L2MissRate.png?raw=true" /> 
 
 By observing the data, we see that higher CPI leads to higher simulation times. As it seems the main reason for high CPI are the caches misses. L2 cache miss rates are higher than L1 cache miss rates. In the sjeng benchmark, where L1_Data cache and L2 cache miss rates are higher than the other benchmarks the simulation time is much worse.
 
