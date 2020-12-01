@@ -3,7 +3,7 @@
 
 This file contains the contains the results of the second lab exercise.
 
-Note that in commands sections the files and folders paths maybe different from the those mentioned in this file.
+Note that in commands sections the files and folders paths maybe different from those mentioned in this file.
 
 ### 1. Run Benchmarks
 
