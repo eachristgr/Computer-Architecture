@@ -3,6 +3,8 @@
 
 This file contains the contains the results of the second lab exercise.
 
+Note that in commands sections the files and folders paths maybe different from the those mentioned in this file.
+
 ### 1. Run Benchmarks
 
 For the second lab, first we had to run a set of benchmark tests in the gem5 emulator. We downloaded the benchmarks, compiled them and then we used their executable files to ran the simulations.
