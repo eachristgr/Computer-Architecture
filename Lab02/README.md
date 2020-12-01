@@ -92,11 +92,11 @@ $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/speclibm configs/example/se.p
 
 The results of these simulations were saved in the **spec_results_1GHz** folder.
 
-To summarize the results and compare them with the previous simulations we quote the following diagrams: 
+To summarize the results and compare them with the previous simulations we quote the following diagrams:
 
-![BenchmarksComparation_SimulationTime](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_3/1_3_plots/BenchmarksComparation_SimulationTime.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_3_plots/BenchmarksComparation_SimulationTime.png?raw=true" />
 
-![BenchmarksComparation_CPI](/home/eachrist/Desktop/Computer_Architecture/my_gem5/LAB_02/1/1_3/1_3_plots/BenchmarksComparation_CPI.png)
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step01/1_3_plots/BenchmarksComparation_CPI.png?raw=true" /> 
 
 Note that the miss rates of caches remain the same, so there is no point in presenting them.
 
