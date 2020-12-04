@@ -78,7 +78,7 @@ By observing the data, we see that higher CPI leads to higher simulation times. 
 
 In this step, we wanted to see how a different CPU clock will effect the simulations and what are the differences with the system clock.
 
-First we ran the same benchmarks with CPU clock at 1 GHZ. The commands were used are:
+First we ran the same benchmarks with CPU clock at 1 GHz. The commands were used are:
 
 ```bash
 $ ./build/ARM/gem5.opt -d LAB_02/spec_results_1GHz/specbzip configs/example/se.py --cpu-type=MinorCPU --cpu-clock=1GHz --caches --l2cache -c spec_cpu2006/401.bzip2/src/specbzip -o "spec_cpu2006/401.bzip2/data/input.program 10" -I 100000000
