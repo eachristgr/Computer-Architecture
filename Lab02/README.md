@@ -215,7 +215,7 @@ In order to study the cost-performance ratio, a cost function must be designed. 
 
 Based on the above the following, indicative cost function was created:
 
-Cost = 100 * (CacheLine_Size/256 + 0.7*(L1D_Size + L1I_Size)/256 + 0.4*L2_Size/2048 + 0.8*(L1D_Assoc + L1I_Assoc)/32 + 0.5*L2_Assoc/16
+Cost = 100 * (CacheLine_Size/256 + 0.7*(L1D_Size + L1I_Size)/256 + 0.4*L2_Size/2048 + 0.8*(L1D_Assoc + L1I_Assoc)/32 + 0.5*L2_Assoc/16)
 
 The graph below shows the cost of the reference system and the optimized systems in each case:
 
