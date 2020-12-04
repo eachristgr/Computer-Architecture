@@ -206,7 +206,7 @@ As can be seen from the diagrams greater improvement was made in jseng and libm 
 
 The design of a system is not solely for the purpose of high performance. Cost also plays an important role in choosing the characteristics of a system.
 
-In order to study the cost-performance ratio, we must first design a cost function. To do this, the following decisions were made:
+In order to study the cost-performance ratio, a cost function must be designed. To do this, the following decisions were made:
 
 - A larger cache has a higher cost.
 - Costs change exponentially with cache size.
@@ -215,6 +215,6 @@ In order to study the cost-performance ratio, we must first design a cost functi
 - Higher cache associativity means greater construction complexity leading to higher cost.
 - Costs change exponentially with cache associativity.
 
-Based on the above we create the following, indicative cost function:
+Based on the above the following, indicative cost function was created:
 
 **Cost = e^(CacheLine_Size) + 0.7e^(L1D_Size + L1I_Size) + 0.4e^(L2_Size) + 0.8e^(L1D_Assoc + L1I_Assoc) + 0.5e^(L2_Assoc)**
