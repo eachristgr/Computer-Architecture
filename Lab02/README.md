@@ -209,12 +209,10 @@ The design of a system is not solely for the purpose of high performance. Cost a
 In order to study the cost-performance ratio, a cost function must be designed. To do this, the following decisions were made:
 
 - A larger cache has a higher cost.
-- Costs change exponentially with cache size.
 - L1 cahce is faster than L2. So the L1 cache size affects the overall cost more.
 - Cache line size affects the costs of L1 and L2.
 - Higher cache associativity means greater construction complexity leading to higher cost.
-- Costs change exponentially with cache associativity.
 
 Based on the above the following, indicative cost function was created:
 
-**Cost = e^(CacheLine_Size) + 0.7e^(L1D_Size + L1I_Size) + 0.4e^(L2_Size) + 0.8e^(L1D_Assoc + L1I_Assoc) + 0.5e^(L2_Assoc)**
+**Cost = 100 * (CacheLine_Size/256 + 0.7*(L1D_Size + L1I_Size)/256 + 0.4*L2_Size/2048 + 0.8*(L1D_Assoc + L1I_Assoc)/32 + 0.5*L2_Assoc/16**
