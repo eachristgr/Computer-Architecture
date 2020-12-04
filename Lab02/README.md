@@ -148,7 +148,7 @@ In order to study the effect of the parameters, a reference 1GHz CPU system with
 | ---------------------------------- | ------ |
 | L1_Data Cache Size                 | 32 kB  |
 | L1_Data Cache Associativity        | 1      |
-| L1_Instruction Cache Size          | 63 kB  |
+| L1_Instruction Cache Size          | 64 kB  |
 | L1_Instruction Cache Associativity | 1      |
 | L2 Cache Size                      | 512 kB |
 | L2 Cache Size Associativity        | 2      |
