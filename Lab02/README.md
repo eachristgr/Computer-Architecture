@@ -217,3 +217,4 @@ In order to study the cost-performance ratio, we must first design a cost functi
 
 Based on the above we create the following, indicative cost function:
 
+**Cost = e^(CacheLine_Size) + 0.7e^(L1D_Size + L1I_Size) + 0.4e^(L2_Size) + 0.8e^(L1D_Assoc + L1I_Assoc) + 0.5e^(L2_Assoc)**
