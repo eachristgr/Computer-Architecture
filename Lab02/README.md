@@ -122,7 +122,7 @@ Then we took a look in the **config.ini** files to find out what is clocked with
 | Memory               | system.clk_domain.clock     |
 | Memory Bus           | system.clk_domain.clock     |
 
-So we see that the CPU and the caches use the CPU-Clock (1 GHz or 2 GHz), however the memory uses the system clock that in both cases are 1 GHz. As the L2 cache is the layer that communicates with the memory, their difference in clocks in the 2 GHz case, propably delays transferring files to and from the memory leading to a higher CPI number, especially when the L2 cache miss rates are large. As can be seen from the graphs, in the case of libm and sjeng, while the CPI has decreased considerably, the same percentage of improvements ισ not observed in the simulation time.
+So we see that the CPU and the caches use the CPU-Clock (1 GHz or 2 GHz), however the memory uses the system clock that in both cases are 1 GHz. As the L2 cache is the layer that communicates with the memory, their difference in clocks in the 2 GHz case, propably delays transferring files to and from the memory leading to a higher CPI number, especially when the L2 cache miss rates are large. As can be seen from the graphs, in the case of libm and sjeng, while the CPI has decreased considerably, the same percentage of improvements is not observed in the simulation time.
 
 Suppose for a while a system that can utilize two CPUs. Probably in such a system the miss rates and CPIs of each CPU are the same as those of the system with one CPU. However each CPU would have less data to handle and would need less communication with the memory. So in this problem, where the 1GHz CPU has lower CPI, the use of two 1GHz CPUs would lead to better simulation times compared to the 2Ghz CPU system.
 
