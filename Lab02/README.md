@@ -201,3 +201,19 @@ The following diagrams compare these systems and the references ones with the Si
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_CPI.png?raw=true" /> 
 
 As can be seen from the diagrams greater improvement was made in jseng and libm benchmarks. Recall that these two had quite high L2 cache miss rate. The increase in size and associativity of the L2 cache as well in size of the cache line led to the fall of L2 cache miss rates resulting in lower simulation times and CPIs.
+
+### 3. Performance Costs
+
+The design of a system is not solely for the purpose of high performance. Cost also plays an important role in choosing the characteristics of a system.
+
+In order to study the cost-performance ratio, we must first design a cost function. To do this, the following decisions were made:
+
+- A larger cache has a higher cost.
+- Costs change exponentially with cache size.
+- L1 cahce is faster than L2. So the L1 cache size affects the overall cost more.
+- Cache line size affects the costs of L1 and L2.
+- Higher cache associativity means greater construction complexity leading to higher cost.
+- Costs change exponentially with cache associativity.
+
+Based on the above we create the following, indicative cost function:
+
