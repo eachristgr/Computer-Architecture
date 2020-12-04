@@ -142,7 +142,7 @@ Initially, a study was performed on how the parameters below affect the simulati
 
 #### 2.1. Method of Study
 
-In order to study the effect of the parameters, a reference system with the values below was set:
+In order to study the effect of the parameters, a reference 1GHz CPU system with the values below was set:
 
 | Parameter                          | Value  |
 | ---------------------------------- | ------ |
