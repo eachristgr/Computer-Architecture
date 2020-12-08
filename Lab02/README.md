@@ -178,7 +178,7 @@ Below are graphs showing the effect of the parameters on the CPI of the benchmar
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
 
-From the first plots can be seen that:
+From the plots can be seen that:
 
 - **L1_Data Cache Size** affects all benchmarks, more the mcf and less the sjeng.
 - **L1_Data Cache Associativity** has little effect on bzip and hmmer.
