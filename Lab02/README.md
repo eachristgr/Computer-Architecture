@@ -235,7 +235,7 @@ Instead, in the second diagram the upgrade of the parameters seems to mainly inc
 
 As costs increase the average CPI of benchmarks remains relatively stable.
 
-Looking at the results, we can say that an upgrade to the system and especially to the cache line size has some costs which is justified by the performance. However, more upgrades increase the cost more than the performance. So a system with a relatively low cost but that can perform well in all five benchmarks could be either **Sim_03** or **Sim_05**.
+Looking at the results, we can say that an upgrade to the system and especially to the cache line size has some costs which is justified by the performance. However, more upgrades increase the cost more than the performance. So a system with a relatively low cost but that can perform well in all five benchmarks could be **Sim_03**.
 
 
 
