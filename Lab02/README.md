@@ -156,25 +156,13 @@ In order to study the effect of the parameters, a reference 1GHz CPU system with
 
 Then a set of bash scripts was created in order to run its benchmark in systems with different parameters. Each system created differed from the original only in the value of one parameter. So the results showed which parameters most affect the performance in each benchmark.
 
-The bash scripts are in the **step02/bash_scripts/stage1** folder and the simulations files in the **step02/simulations_files_results/benchmark_name/benchmark_name_parameter_name** folders. Also the results with the desired measurements are listed in the **step02/simulations_files_results/benchmark_name/results_all.txt** files, these files show how each parameter affects the CPI, the simulation time and the caches miss rates.
-
-Having a better idea of the problem, new bash scripts were created in order to run the benchmarks on systems that differ more from the reference system.
-
-The second bash scripts are in the **step02/bash_scripts/stage2** folder and the second simulations files in the **step02/simulations_files_results/benchmark_name/benchmark_name_f##** folders. Also the results with the desired measurements are listed in the same files as before, **step02/simulations_files_results/benchmark_name/results_all.txt**.
+The bash scripts are in the **step02/bash_scripts** folder and the simulations files in the **step02/simulations_files_results/benchmark_name/benchmark_name_parameter_name** folders. Also the results with the desired measurements are listed in the **step02/simulations_files_results/benchmark_name/results_all.txt** files, these files show how each parameter affects the CPI, the simulation time and the caches miss rates.
 
 #### 2.2. Results Of The Study
 
 This section presents the results of the study.
 
-From the first results it was found out that:
-
-- **bzip** depends primarily on cache line size and L1_Data cache size.
-- **hmmer** depends primarily on L1_Data cache size.
-- **libm** depends primarily on cache line size.
-- **mcf** seems relatively independent of the system parameters.
-- **sjeng** depends primarily on cache line size.
-
-Below are graphs showing the effect of the cache line size and the L1_Data cache size on the CPI of the respective benchmarks.
+Below are graphs showing the effect of the parameters on the CPI of the benchmarks.
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Size.png?raw=true" />
 
@@ -190,27 +178,17 @@ Below are graphs showing the effect of the cache line size and the L1_Data cache
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
 
-It is noted that other parameters can also affect performance, however these have had the greatest impact.
+From the first plots can be seen that:
 
-Taking into account the results of both the above stage and the execution stage of more specific parameters, the following optimized systems were developed :
+- **L1_Data Cache Size** affects all benchmarks, more the mcf and less the sjeng.
+- **L1_Data Cache Associativity** has little effect on bzip and hmmer.
+- **L1_Instruction Cache Size** mainly affects the mcf.
+- **L1_Instruction Cache Associativity** does not affect any benchmark.
+- **L2 Cache Size** has little effect on bzip and mcf.
+- **L2 Cache Size Associativity** has little effect on bzip.
+- **Cache Line Size** affects all benchmarks, libm and sjeng are affected greatly.
 
-|                                    | bzip    | hmmer   | libm    | mcf     | sjeng   |
-| ---------------------------------- | ------- | ------- | ------- | ------- | ------- |
-| L1_Data Cache Size                 | 128 kB  | 128 kB  | 64 kB   | 128 kB  | 64 kB   |
-| L1_Data Cache Associativity        | 16      | 16      | 1       | 1       | 1       |
-| L1_Instruction Cache Size          | 64 kB   | 64 kB   | 64 kB   | 64 kB   | 64 kB   |
-| L1_Instruction Cache Associativity | 1       | 1       | 1       | 1       | 1       |
-| L2 Cache Size                      | 2048 kB | 1024 kB | 2048 kB | 2048 kB | 1024 kB |
-| L2 Cache Size Associativity        | 4       | 2       | 2       | 2       | 16      |
-| Cache Line Size                    | 128 kB  | 64 kB   | 256 kB  | 128 kB  | 256 kB  |
-
-The following diagrams compare these systems and the references ones with the Simulation Time and the CPI :
-
-<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_SimSec.png?raw=true" /> 
-
-<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/Ref_Opt_CPI.png?raw=true" /> 
-
-As can be seen from the diagrams greater improvement was made in jseng and libm benchmarks. Recall that these two had quite high L2 cache miss rate. The increase in size and associativity of the L2 cache as well in size of the cache line led to the fall of L2 cache miss rates resulting in lower simulation times and CPIs.
+It is noted that the parameters can also affect other features of the benchmarks, information about the them can be found in the files mentioned in the previous subsection.
 
 ### 3. Performance Costs
 
@@ -227,8 +205,25 @@ Based on the above the following, indicative cost function was created:
 
 Cost = 100 * (CacheLine_Size/256 + 0.7*(L1D_Size + L1I_Size)/256 + 0.4*L2_Size/2048 + 0.8*(L1D_Assoc + L1I_Assoc)/32 + 0.5*L2_Assoc/16)
 
-The graph below shows the cost of the reference system and the optimized systems in each case:
+Having the results of the second step and the cost function, we run eight identical simulations for all the benchmarks in order to find a system that has a relatively good cost-effectiveness.
 
-<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step03/3_plots/Cost.png?raw=true" />
+The parameters selected for each simulation are shown below:
 
-It seems that the systems that emerged in the second step achieve high efficiency but their cost increases significantly. For the design of a system with relatively good performance but also satisfactory costs, it is necessary to introduce the cost-performance ratio in the research.
+|        | Sim_01 | Sim_02 | Sim_03 | Sim_04 | Sim_05 | Sim_06 | Sim_07 | Sim_08 |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| L1_D S | 32kB   | 32kB   | 32kB   | 32kB   | 64kB   | 64kB   | 64kB   | 64kB   |
+| L1_D A | 4      | 4      | 4      | 4      | 4      | 4      | 4      | 4      |
+| L1_I S | 32kB   | 32kB   | 64kB   | 64kB   | 32kB   | 32kB   | 64kB   | 64kB   |
+| L1_I A | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
+| L2 S   | 512kB  | 1024kB | 512kB  | 1024kB | 512kB  | 1024kB | 512kB  | 1024kB |
+| L2 A   | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
+| CL S   | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  |
+
+The bash scripts for these simulations are in the **step03/bash_scripts** folder and the simulations files in the **step03/simulations_files_results/benchmark_name_s##** folders. Also the results with the desired measurements are listed in the **step03/simulations_files_results/results_all.txt** file, these file show how the simulations settings affects the CPI, the simulation time and the caches miss rates for every benchmark.
+
+The graphs below show the yield of each benchmark for each simulation and the cost of each simulation:
+
+
+
+
+
