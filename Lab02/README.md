@@ -156,11 +156,11 @@ In order to study the effect of the parameters, a reference 1GHz CPU system with
 
 Then a set of bash scripts was created in order to run its benchmark in systems with different parameters. Each system created differed from the original only in the value of one parameter. So the results showed which parameters most affect the performance in each benchmark.
 
-The bash scripts are in the **step02/bash_scripts/stage1** folder, the simulations files in the **step02/simulations_files_results** folder and the results are listed in the **results_all.txt** files inside the benchmarks subfolders.
+The bash scripts are in the **step02/bash_scripts/stage1** folder and the simulations files in the **step02/simulations_files_results/benchmark_name/benchmark_name_parameter_name** folders. Also the results with the desired measurements are listed in the **step02/simulations_files_results/benchmark_name/results_all.txt** files, these files show how each parameter affects the CPI, the simulation time and the caches miss rates.
 
 Having a better idea of the problem, new bash scripts were created in order to run the benchmarks on systems that differ more from the reference system.
 
-The second bash scripts are in the **step02/bash_scripts/stage2** folder, the second simulations files and their results are stored in the same location as before but their subfolder have different name format.
+The second bash scripts are in the **step02/bash_scripts/stage2** folder and the second simulations files in the **step02/simulations_files_results/benchmark_name/benchmark_name_f##** folders. Also the results with the desired measurements are listed in the same files as before, **step02/simulations_files_results/benchmark_name/results_all.txt**.
 
 #### 2.2. Results Of The Study
 
@@ -176,9 +176,19 @@ From the first results it was found out that:
 
 Below are graphs showing the effect of the cache line size and the L1_Data cache size on the CPI of the respective benchmarks.
 
-<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Size.png?raw=true" />
 
-<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Size.png?raw=true" /> 
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Data%20Cache%20Associativity.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Instruction%20Cache%20Size.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L1_Instruction%20Cache%20Associativity.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L2%20Cache%20Size.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20L2%20Cache%20Associativity.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step02/2_2_plots/CPI%20vs%20Cache%20Line%20Size.png?raw=true" />
 
 It is noted that other parameters can also affect performance, however these have had the greatest impact.
 
