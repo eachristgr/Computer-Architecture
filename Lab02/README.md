@@ -223,7 +223,19 @@ The bash scripts for these simulations are in the **step03/bash_scripts** folder
 
 The graphs below show the yield of each benchmark for each simulation and the cost of each simulation:
 
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step03/3_plots/CPI%20.png?raw=true" />
 
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step03/3_plots/Simulations_Costs%20.png?raw=true" />
+
+Initially from the first diagram it seems that the simulations tested are, for most benchmarks , more efficient than the reference one. However, it is observed that no large differences are observed between these simulations. This concludes that further upgrading to parameter values does not greatly increase performance.
+
+Instead, in the second diagram the upgrade of the parameters seems to mainly increase the cost. This is best seen in the diagram below :
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab02/step03/3_plots/AvgCPI_Cost%20.png?raw=true" />
+
+As costs increase the average CPI of benchmarks remains relatively stable.
+
+Looking at the results, we can say that an upgrade to the system and especially to the cache line size has some costs which is justified by the performance. However, more upgrades increase the cost more than the performance. So a system with a relatively low cost but that can perform well in all five benchmarks could be either **Sim_03** or **Sim_05**.
 
 
 
