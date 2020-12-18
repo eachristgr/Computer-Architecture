@@ -108,17 +108,17 @@ After selecting the appropriate files from Lab02 - step02, **Scripts/GEM5ToMcPAT
 
 Then **step02/create_mcpat_results_bash_cmds.sh** was used, in order to run McPAT tool for every XLM file. The results were saved in the **mcpat_results** folder. From these Peak Power was used in order to create the following plots :
 
-Peak Power vs Cache Line Size.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20Cache%20Line%20Size.png?raw=true" />
 
-Peak Power vs L1_Data Cache Associativity.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L1_Data%20Cache%20Associativity.png?raw=true" />
 
-Peak Power vs L1_Data Cache Size.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L1_Data%20Cache%20Size.png?raw=true" />
 
-Peak Power vs L1_Instruction Cache Associativity.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L1_Instruction%20Cache%20Associativity.png?raw=true" />
 
-Peak Power vs L1_Instruction Cache Size.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L1_Instruction%20Cache%20Size.png?raw=true" />
 
-Peak Power vs L2 Cache Associativity.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L2%20Cache%20Associativity.png?raw=true" />
 
-Peak Power vs L2 Cache Size.png
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L2%20Cache%20Size.png?raw=true" />
 
