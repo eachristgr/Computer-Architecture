@@ -43,13 +43,13 @@ In order to show that a high power processor cannot be more energy efficient tha
 
 The needed information about the processor was produced by McPAT with the following commands :
 
-- Xeon
+- **Xeon**
 
  ```bash
 $ ./my_mcpat/mcpat/mcpat -infile my_mcpat/mcpat/ProcessorDescriptionFiles/Xeon.xml - print_level 1 > Lab03/step01/Xeon.txt
  ```
 
-- ARM A9
+- **ARM A9**
 
  ```bash
 $ ./my_mcpat/mcpat/mcpat -infile my_mcpat/mcpat/ProcessorDescriptionFiles/ARM_A9_2GHz.xml - print_level 1 > Lab03/step01/ARM_A9.txt
