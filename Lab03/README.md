@@ -78,11 +78,11 @@ Where time is the execution time of the application in seconds.
 
 Due to the fact that the total run-times are not available, there was made the assumption that Xeon is 40 times faster than the ARM A9, so the results are :
 
-- Xeon
+- **Xeon**
 
 **Xeon_Energy = (36.8319 + 72.9199 ) * 1 =  109.7518 J**
 
-- ARM A9
+- **ARM A9**
 
 **ARMA9_Energy = (0.108687 + 2.96053 ) * 40 =  122.76868 J**
 
