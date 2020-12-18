@@ -122,3 +122,13 @@ Then **step02/create_mcpat_results_bash_cmds.sh** was used, in order to run McPA
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20L2%20Cache%20Size.png?raw=true" />
 
+By observing the data, the following results can be said :
+
+- **Cache Line Size**  has the biggest affect.
+- **L1_Data Cache Associativity** has a small affect. Above 2 there leads to a bigger Peak Power increscent.
+- **L1_Data Cache Size** above 32kB leads to a bigger Peak Power increscent.
+- **L1_Instruction Cache Associativity** leads to a smaller Peak Power, when it is 4.
+- **L1_Instruction Cache Size** above 32kB leads to a bigger Peak Power increscent.
+- **L2 Cache Size Associativity** leads to a bigger Peak Power, when it is 1. Nevertheless, it has very little influence.
+- **L2 Cache Size**  has very little influence.
+
