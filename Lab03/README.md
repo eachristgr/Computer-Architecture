@@ -129,6 +129,5 @@ By observing the data, the following results can be said :
 - **L1_Data Cache Size** above 32kB leads to a bigger Peak Power increscent.
 - **L1_Instruction Cache Associativity** leads to a smaller Peak Power, when it is 4.
 - **L1_Instruction Cache Size** above 32kB leads to a bigger Peak Power increscent.
-- **L2 Cache Size Associativity** leads to a bigger Peak Power, when it is 1. Nevertheless, it has very little influence.
-- **L2 Cache Size**  has very little influence.
-
+- **L2 Cache Size Associativity** leads to a bigger Peak Power, when it is 1. Nevertheless, it has a small influence.
+- **L2 Cache Size**  has a small influence.
