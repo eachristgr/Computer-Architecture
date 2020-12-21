@@ -35,7 +35,7 @@ So assuming the same battery, a 40 Watt processor can reduce the battery's life 
 
 In case the battery life for the 40 Watt processor should be longer, CPU power should be reduced. Lower CPU voltage, lower CPU frequency and cutting off the power of the transistors which are not used at the moment are some measures that can lead to less power consumption. However can lead to worse performance, too. 
 
-Thus a research is required to find the optimal relationship between performace and energy consumption. **McPat** does not show all the information needed to compute the energy consumption, specifically the total simulation time. In order to calculate the energy consumption, files that were generated with the **gem5** simulations must be used.
+Thus a research is required to find the optimal relationship between performance and energy consumption. **McPat** does not show all the information needed to compute the energy consumption, specifically the total simulation time. In order to calculate the energy consumption, files that were generated with the **gem5** simulations must be used.
 
 #### 1.3. Compare Xeon's and ARM A9's Energy Efficiency
 
