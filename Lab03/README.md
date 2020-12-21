@@ -29,13 +29,13 @@ As much as a program runs there is a definite number of switches that will happe
 
 #### 1.2. Energy Efficiency
 
-To see if the 40W processor can reduce the battery's life slower than than a 5W processor a way to reduce either of the Leakage/Dynamic Powers must be found.
+Energy and power are closely related but are not the same physical quantity. Energy is the total amount of work done, and power is how fast you can do it. In other words, power is energy per unit of time. A battery holds a particular amount of energy, a CPU that need a certaiwn amount of power to run can show how quickly power is drawn from the battery and determines how long its stored energy will last.
 
-Reducing CPU voltage can reduce **Dynamic Power** leading to less power consumption. Furthermore a lower CPU frequency in order to minimize the switches that happens to the transistors can reduce the energy consumption, too. Though both options slow down the CPU a lot.
+So assuming the same battery, a 40 Watt processor can reduce the battery's life ten times faster than a 4 Watt processor. 
 
-The **Leakage Power** can be reduced by cutting off the power of the transistors which are not used at the moment. 
+In case the battery life for the 40 Watt processor should be longer, CPU power should be reduced. Lower CPU voltage, lower CPU frequency and cutting off the power of the transistors which are not used at the moment are some measures that can lead to less power consumption. However can lead to worse performance, too. 
 
-**McPat** does not show all the information needed to compute the energy consumption, specifically the total simulation time. In order to calculate the energy consumption, files that were generated with the **gem5** simulations must be used.
+Thus a research is required to find the optimal relationship between performace and energy consumption. **McPat** does not show all the information needed to compute the energy consumption, specifically the total simulation time. In order to calculate the energy consumption, files that were generated with the **gem5** simulations must be used.
 
 #### 1.3. Compare Xeon's and ARM A9's Energy Efficiency
 
