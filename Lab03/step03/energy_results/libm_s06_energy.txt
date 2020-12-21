@@ -1,0 +1,4 @@
+Reading simulation time from: Lab03/step03/mcpat_results/libm_system_06.txt
+Reading simulation time from: Lab02/step03/simulations_files_results/libm_s06/stats.txt
+leakage: 2.561520 W, dynamic: 1.822890 W and runtime: 0.165487 sec
+energy is 725.562858 mJ

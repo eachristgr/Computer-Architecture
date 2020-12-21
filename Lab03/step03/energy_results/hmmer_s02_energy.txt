@@ -1,0 +1,4 @@
+Reading simulation time from: Lab03/step03/mcpat_results/hmmer_system_02.txt
+Reading simulation time from: Lab02/step03/simulations_files_results/hmmer_s02/stats.txt
+leakage: 2.577940 W, dynamic: 2.184210 W and runtime: 0.128432 sec
+energy is 611.612449 mJ

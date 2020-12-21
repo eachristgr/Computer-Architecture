@@ -104,9 +104,9 @@ To do this, a study of how various features of a system affect its power must be
 
 In order to study the affect of the system features in its power, gem5 results from Lab02 - step02 were used. 
 
-After selecting the appropriate files from Lab02 - step02, **Scripts/GEM5ToMcPAT.py** file was used in order to create the necessary XML files. More specifically **step02/create_xmls_bash_cmd.sh** was used and the XML files were save in the **xml_files** folder.
+After selecting the appropriate files from Lab02 - step02, **Scripts/GEM5ToMcPAT.py** file was used in order to create the necessary XML files. More specifically **step02/create_xmls_bash_cmd.sh** was used and the XML files were save in the **step02/xml_files** folder.
 
-Then **step02/create_mcpat_results_bash_cmds.sh** was used, in order to run McPAT tool for every XLM file. The results were saved in the **mcpat_results** folder. From these Peak Power was used in order to create the following plots :
+Then **step02/create_mcpat_results_bash_cmds.sh** was used, in order to run McPAT tool for every XLM file. The results were saved in the **step02/mcpat_results** folder. From these Peak Power was used in order to create the following plots :
 
 <img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step02/2_1_plots/Peak%20Power%20vs%20Cache%20Line%20Size.png?raw=true" />
 
@@ -131,3 +131,26 @@ By observing the data, the following results can be said :
 - **L1_Instruction Cache Size** above 32kB leads to a bigger Peak Power increscent.
 - **L2 Cache Size Associativity** leads to a bigger Peak Power, when it is 1. Nevertheless, it has a small influence.
 - **L2 Cache Size**  has a small influence.
+
+#### 2.2. Calculate EDPs
+
+In this step, eight systems from Lab02-step03 were used in order to calculate the EDP values.
+
+The systems were defined in the Lab02 and their features are shown below :
+
+|        | Sim_01 | Sim_02 | Sim_03 | Sim_04 | Sim_05 | Sim_06 | Sim_07 | Sim_08 |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| L1_D S | 32kB   | 32kB   | 32kB   | 32kB   | 64kB   | 64kB   | 64kB   | 64kB   |
+| L1_D A | 4      | 4      | 4      | 4      | 4      | 4      | 4      | 4      |
+| L1_I S | 32kB   | 32kB   | 64kB   | 64kB   | 32kB   | 32kB   | 64kB   | 64kB   |
+| L1_I A | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
+| L2 S   | 512kB  | 1024kB | 512kB  | 1024kB | 512kB  | 1024kB | 512kB  | 1024kB |
+| L2 A   | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
+| CL S   | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  | 256kB  |
+
+In order to calculate the energy these systems consumed, for every benchmark tested in Lab02, first the XML files has to be created. More specifically **step03/create_xmls_bash_cmd.sh** was used and the XML files were save in the **step03/xml_files** folder.
+
+Then **step03/create_mcpat_results_bash_cmds.sh** was used, in order to run McPAT tool for every XLM file. The results were saved in the **step03/mcpat_results** folder.
+
+After that, the McPAT results together with their corresponding stats.txt files from gem5 were used in order to obtain the energy results. For that **Scripts/print_energy.py** was used, more specifically **step03/create_energy_results_bash_cmds.sh** was used and the energy results files were save in the **energy_results** folder.
+
