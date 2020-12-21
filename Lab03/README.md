@@ -154,3 +154,14 @@ Then **step03/create_mcpat_results_bash_cmds.sh** was used, in order to run McPA
 
 After that, the McPAT results together with their corresponding stats.txt files from gem5 were used in order to obtain the energy results. For that **Scripts/print_energy.py** was used, more specifically **step03/create_energy_results_bash_cmds.sh** was used and the energy results files were save in the **energy_results** folder.
 
+The following graphs show the total simulation time and energy required by each system to complete each benchmark, as well as the average EDP of each system :
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step03/3_plots/Simulation_Time.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step03/3_plots/Energy.png?raw=true" />
+
+<img src="https://github.com/eachristgr/Computer-Architecture/blob/main/Lab03/step03/3_plots/EDP.png?raw=true" />
+
+As can be seen from the results for the same simulation times the energy required is different and depends on the different characteristics of the system. From the systems used, it seems that the 5th system (**Sim_05**) has a better relationship between efficiency and energy consumption in all the benchmarks (Average EDM).
+
+Finally note that the results produced may contain errors and may not be consistent with real-world data. In the real world hardware failures and bad timing between subsystems can lead to different results. In addition McPAT, gem5 and the benchmarks use higher level languages making it impossible to use more detailed lower level information of the systems. In addition, this research was based in a part on the Lab02's and gem5's results, as these may also contain errors, their use in this research may have introduced even more errors.
