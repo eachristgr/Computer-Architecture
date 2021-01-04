@@ -29,7 +29,7 @@ As much as a program runs there is a definite number of switches that will happe
 
 #### 1.2. Energy Efficiency
 
-Energy and power are closely related but are not the same physical quantity. Energy is the total amount of work done, and power is how fast you can do it. In other words, power is energy per unit of time. A battery holds a particular amount of energy, a CPU that need a certaiwn amount of power to run can show how quickly power is drawn from the battery and determines how long its stored energy will last.
+Energy and power are closely related but are not the same physical quantity. Energy is the total amount of work done, and power is how fast you can do it. In other words, power is energy per unit of time. A battery holds a particular amount of energy, a CPU that need a certain amount of power to run can show how quickly power is drawn from the battery and determines how long its stored energy will last.
 
 So assuming the same battery, a 40 Watt processor can reduce the battery's life ten times faster than a 4 Watt processor. 
 
@@ -55,7 +55,7 @@ $ ./my_mcpat/mcpat/mcpat -infile my_mcpat/mcpat/ProcessorDescriptionFiles/Xeon.x
 $ ./my_mcpat/mcpat/mcpat -infile my_mcpat/mcpat/ProcessorDescriptionFiles/ARM_A9_2GHz.xml - print_level 1 > Lab03/step01/ARM_A9.txt
  ```
 
-The results were saved in **step01** folder. From these the following information, about the processor, can be obtained :
+The results were saved in **step01** folder. From these, the following information about the processor can be obtained :
 
 |                                        |     Xeon     |    ARM A9    |
 | :------------------------------------- | :----------: | :----------: |
@@ -88,11 +88,11 @@ Due to the fact that the total run-times are not available, there was made the a
 
 As it turns out, the power consumed to run the application is less for the Xeon processor. However, assuming that the operation of the systems is not interrupted after the execution of the application, the power required by the Xeon processor for the remaining 39 seconds must be added.
 
-This energy can be calculated from the leakage currents of the closed transistors. So the energy consumed by the Xeon processor in 40 seconds is :
+This energy can be calculated from the leakage currents. So the energy consumed by the Xeon processor in 40 seconds is :
 
 **Xeon_Energy = 109.7518 + 36.8319 * 39 =  1546.1959 J**
 
-As it turns out, Xeon  may need less power than ARM A9 to perform the same application, however at the same time the power consumption from leakage currents is much higher. So Xeon can not be more energy efficient than ARM A9.
+As it turns out, Xeon  may need less power than ARM A9 to run the same application, however at the same time the power consumption from leakage currents is much higher. So Xeon can not be more energy efficient than ARM A9.
 
 ### 2. Energy - Delay Product Optimization (gem5 + McPAT)
 
