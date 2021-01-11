@@ -3,7 +3,7 @@
 #### **Aristotle University of Thessaloniki - Electrical and Computer Engineering**
 ##### **Christos Emmanouil, Chatzipemou Aristeidis**
 
-This repository contains the laboretory assignments for course of Advanced Computer Architecture.
+This repository contains the laboratory assignments for course of Advanced Computer Architecture.
 
 The purpose of the exercises was to understand how **gem5**, **McPAT** simulators work and through them to know the parameters and issues that arise during the design process of a CPU.
 
