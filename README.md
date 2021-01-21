@@ -4,7 +4,7 @@
 
 ##### **Course : Computer Architecture**
 
-##### **Authors : [Emmanouil Christos](https://github.com/eachristgr), Chatzipemou Aristeidis**
+##### **Authors : [Emmanouil Christos](https://github.com/eachristgr), [Chatzipemou Aristeidis](https://github.com/Aristeidc)**
 
 ------
 
