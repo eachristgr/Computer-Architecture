@@ -1,7 +1,12 @@
 # Computer-Architecture
 
-#### **Aristotle University of Thessaloniki - Electrical and Computer Engineering**
-##### **Christos Emmanouil, Chatzipemou Aristeidis**
+##### **Aristotle University of Thessaloniki - Electrical and Computer Engineering**
+
+##### **Course : Operating Systems**
+
+##### **Authors : [Emmanouil Christos](https://github.com/eachristgr), Chatzipemou Aristeidis**
+
+------
 
 This repository contains the laboratory assignments for the course of Advanced Computer Architecture.
 
