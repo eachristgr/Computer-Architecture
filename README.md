@@ -1,8 +1,8 @@
-# Computer-Architecture
+# Computer Architecture - Laboratory Assignments
 
 ##### **Aristotle University of Thessaloniki - Electrical and Computer Engineering**
 
-##### **Course : Operating Systems**
+##### **Course : Computer Architecture**
 
 ##### **Authors : [Emmanouil Christos](https://github.com/eachristgr), Chatzipemou Aristeidis**
 
